@@ -2,6 +2,7 @@
     "layer": "top",
     "position": "top",
     "spacing": 4,
+    "output": "DP-1",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock", "cpu", "memory"],
     "modules-right": ["pulseaudio", "network#1", "network#2","tray"],
