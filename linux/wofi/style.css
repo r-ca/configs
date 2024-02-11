@@ -1,0 +1,39 @@
+* {
+    font-family: Koruri;
+    font-size: 14px;
+}
+
+window {
+    background-color: lightgray;
+    border-radius: 4px;
+}
+
+#outer-box {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    margin: 8px;
+    padding: 6px;
+}
+
+#entry {
+    margin: 4px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
+#entry:selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#text:selected {
+    color: black;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 3px solid black;
+    color: white;
+}
