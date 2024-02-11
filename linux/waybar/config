@@ -4,7 +4,7 @@
     "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock", "cpu", "memory"],
-    "modules-right": ["pulseaudio", "network" ,"tray"],
+    "modules-right": ["pulseaudio", "network#1", "network#2","tray"],
 
 
     // Module configurations
@@ -25,42 +25,41 @@
 
     "clock": {
         "format": "{:%a %b %d, %H:%M:%S}",
-        "interval": 1
+        "interval": 1,
+        "min-length": 21
     },
 
-    "network": {
-        "format-wifi": "{essid} ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "network#1": {
+        "format": "{ifname} {ipaddr}/{cidr}",
+        "min-length": 20
+    },
+
+    "network#2": {
+        "format": "\uf077 {bandwidthUpBits} \uf078 {bandwidthDownBits}",
+        "interval": 1,
+        "min-length": 24
     },
 
     "pulseaudio": {
-        "format": "{volume}%{icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": "",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} \uf293 {volume}%",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "default": [ "\uf026", "\uf027", "\uf028" ]
         },
-        "on-click": "pavucontrol"
+        "scroll-step": 0.5,
+        "on-click": "pavucontrol",
+        "min-length": 8
     },
 
     "cpu": {
         "format": "\uf2db {usage}%",
-        "interval": 1
+        "interval": 1,
+        "min-length": 9
     },
 
     "memory": {
         "format": "\uf538 {used}/{total}GB",
-        "interval": 10
+        "interval": 10,
+        "min-length": 18
     }
 }
