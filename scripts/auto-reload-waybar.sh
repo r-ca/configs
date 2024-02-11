@@ -20,12 +20,14 @@ function _parse_error() {
     else
         error "Unknown error: $1. (Continue)"
     fi
+    return
 }
 
 function _reload_waybar() {
-    info `killall waybar` # TODO: 結果をチェックする
-    result=$(waybar & disown)
-    _parse_error "${result}"
+    killall waybar # TODO: 結果をチェックする
+    # result=$(waybar & disown)
+    waybar & disown # TODO: 結果をチェックする
+    # _parse_error "${result}"
 }
 
 while true; do
