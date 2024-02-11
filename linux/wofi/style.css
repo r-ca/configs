@@ -34,6 +34,6 @@ window {
     margin: 5px;
     border-radius: 0px;
     border: none;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #555555;
     color: #555555;
 }
