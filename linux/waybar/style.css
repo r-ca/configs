@@ -58,11 +58,10 @@ window#waybar {
     transition: all 0.2s ease-in-out;
 }
 
-#pulseaudio, #network, #tray, #cpu, #memory, #clock{
+#pulseaudio, #network, #tray, #cpu, #memory, #clock, #bluetooth, #user, #disk{
     margin: 4px 2px;
     border-radius: 4px;
     padding: 0 4px;
     transition: all 0.2s ease-in-out;
     background: rgba(0, 0, 0, 0.1);
 }
-
