@@ -1,4 +1,60 @@
 * {
     font-family: Font Awesome, Koruri;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 3px;
+}
+
+window#waybar {
+    background-color: rgba(255,255,255,0); /* transparent */
+}
+
+.modules-left {
+    background-color: rgba(255,255,255,1);
+    border-radius: 24px;
+    margin: 8px;
+    margin-bottom: 0px; /* ウィンドウ側にマージンは指定されているので */
+}
+
+.modules-right {
+    background-color: rgba(255,255,255,1);
+    border-radius: 24px;
+    margin: 8px;
+    padding: 0px 8px;
+    margin-bottom: 0px; /* ウィンドウ側にマージンは指定されているので */
+}
+
+.modules-center {
+    background-color: rgba(255,255,255,1);
+    border-radius: 24px;
+    margin: 8px;
+    margin-bottom: 0px; /* ウィンドウ側にマージンは指定されているので */
+    transition: transform 0.5s ease-in-out;
+}
+
+#window {
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    border-radius: 24px;
+    margin: 2px 4px;
+}
+
+#workspaces button.active {
+    background-color: #64727D;
+}
+
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
