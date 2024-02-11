@@ -9,8 +9,29 @@
 }
 
 window#waybar {
-    background-color: rgba(255,255,255,0.9);
-    border-radius: 0px 0px 8px 8px;
+    background-color: rgba(255,255,255,0);
+}
+
+.modules-left {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    margin: 4px;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.modules-center {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    margin: 4px;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.modules-right {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    margin: 4px;
+    margin-bottom: 0; /* Remove bottom margin */
+
 }
 
 #workspaces * {
@@ -19,8 +40,10 @@ window#waybar {
 
 #workspaces button {
     margin: 4px 2px;
+    border-radius: 4px;
     padding: 0 4px;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 #workspaces button:hover {
@@ -28,32 +51,18 @@ window#waybar {
 }
 
 #workspaces button.active {
-    border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.2);
-}
-
-#window {
-    font-weight: 400;
-    transition: all 0.2s ease;
-
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-
-    margin: 4px;
-}
-
-.modules-right {
-    margin: 4px;
 }
 
 .modules-right > * {
-    margin: 0 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+#pulseaudio, #network, #tray, #cpu, #memory, #clock{
+    margin: 4px 2px;
+    border-radius: 4px;
     padding: 0 4px;
-    transition: all 0.2s ease;
-}
-
-.modules-right > * {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    background: rgba(0, 0, 0, 0.1);
 }
 
