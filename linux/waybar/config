@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "clock"],
+
+
+    // Module configurations
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
+        "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null"
+    },
+
+    "hyprland/window": {
+        "max-length": 50,
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 4
+    },
+
+    "clock": {
+        "format": "%H:%M"
+    }
+}
