@@ -1,0 +1,11 @@
+keypress_delay_ms: 20
+
+modmap:
+  - name: Global
+    remap:
+      # CapsLock
+      CAPSLOCK: Rightmeta
+
+      # Alt keys
+      LEFTALT: Muhenkan
+      RIGHTALT: Henkan
