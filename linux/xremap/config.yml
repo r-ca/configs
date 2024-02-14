@@ -12,8 +12,8 @@ modmap:
       LEFTALT:
         held: Alt_L
         alone: Muhenkan
-        alone_timeout_millis: 100
+        alone_timeout_millis: 300
       RIGHTALT:
         held: Alt_R
         alone: Henkan
-        alone_timeout_millis: 100
+        alone_timeout_millis: 300
