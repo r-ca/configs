@@ -26,4 +26,5 @@ require("lazy").setup({
 })
 
 -- Keymaps
-
+vim.api.nvim_set_keymap('i', 'ee', vim.cmd("stopinsert"), { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'ee', vim.cmd("startinsert"), { noremap = true, silent = true })
