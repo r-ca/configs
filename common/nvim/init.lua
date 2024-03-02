@@ -28,3 +28,13 @@ require("lazy").setup({
 -- Keymaps
 vim.keymap.set('n', 'ee', ':startinsert<CR>')
 vim.keymap.set('i', 'ee', '<cmd>:stopinsert<CR>')
+
+-- Git
+local Terminal = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
+
+function _lazygit_toggle()
+    lazygit:toggle()
+end
+
+vim.api.nvim_set_keymap('n', 'lg', '<cmd>lua _lazygit_toggle()<CR>', { noremap = true, silent = true })
