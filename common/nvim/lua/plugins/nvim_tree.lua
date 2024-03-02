@@ -16,6 +16,7 @@ return {
 					local api = require 'nvim-tree.api'
 					api.config.mappings.default_on_attach(bufnr)
 					vim.keymap.del('n', 'f', { buffer = bufnr })
+					vim.keymap.set('n', '<Space>', api.node.open.edit, { buffer = bufnr })
 				end
 			})
 			vim.api.nvim_set_keymap('n', 'f', ':NvimTreeToggle<CR>', { noremap = false, silent = true })
