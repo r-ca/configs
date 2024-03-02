@@ -25,6 +25,21 @@ require("lazy").setup({
     }
 })
 
+-- Config
+local opt = vim.opt
+
+opt.autoindent = true -- Auto indent
+opt.smartindent = true -- Smart indent
+
+opt.cursorline = true -- Highlight current line
+opt.number = true -- Show line numbers
+
+opt.tabstop = 2 -- Tab width
+opt.shiftwidth = 2 -- Indent width
+opt.expandtab = false -- Use spaces instead of tabs
+
+
+
 -- Keymaps
 -- vim.keymap.set('n', 'ee', ':startinsert<CR>')
 vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
