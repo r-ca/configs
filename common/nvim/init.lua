@@ -38,10 +38,7 @@ opt.tabstop = 2 -- Tab width
 opt.shiftwidth = 2 -- Indent width
 opt.expandtab = false -- Use spaces instead of tabs
 
-
-
 -- Keymaps
--- vim.keymap.set('n', 'ee', ':startinsert<CR>')
 vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
 
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
@@ -49,11 +46,10 @@ vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 
-
 vim.keymap.set('n', 'J', ':AnyJump<CR>')
 vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
 
--- Git
+-- LazyGit
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
 
