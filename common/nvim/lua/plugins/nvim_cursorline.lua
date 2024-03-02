@@ -1,0 +1,5 @@
+return {
+	{
+		'yamatsum/nvim-cursorline',
+	}
+}
