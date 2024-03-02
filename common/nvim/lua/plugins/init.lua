@@ -4,10 +4,18 @@ return {
     dependencies = {
       'nvim-tree/nvim-web-devicons',
     },
-    config = function()
-      require('nvim-tree').setup({
-        vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true }),
-      })
-    end,
+    opts = {
+      view = {
+        adaptive_size = true,
+        mappings = {
+            list = {
+                { key = "u", action = 'dir_up' },
+            },
+        },
+      },
+      filters = {
+        dotfiles = true,
+      },
+    }
   }
 }
