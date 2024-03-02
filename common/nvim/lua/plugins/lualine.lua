@@ -5,7 +5,7 @@ return {
 	config = function()
 		require('lualine').setup {
 			options = {
-				theme = ayu_light,
+				theme = 'ayu_light',
 				component_separators = '|',
 				section_separators = { left = '', right = '' },
 			},
