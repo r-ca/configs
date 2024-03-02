@@ -26,8 +26,8 @@ require("lazy").setup({
 })
 
 -- Colorscheme
--- vim.cmd[[colorscheme catppuccin]]
-vim.cmd[[colorscheme tokyonight-day]]
+vim.cmd[[colorscheme catppuccin]]
+-- vim.cmd[[colorscheme tokyonight-day]]
 
 -- Config
 local opt = vim.opt
