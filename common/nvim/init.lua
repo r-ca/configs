@@ -26,8 +26,8 @@ require("lazy").setup({
 })
 
 -- Keymaps
-vim.keymap.set('n', 'ee', ':startinsert<CR>')
-vim.keymap.set('i', 'ee', '<cmd>:stopinsert<CR>')
+-- vim.keymap.set('n', 'ee', ':startinsert<CR>')
+vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
 
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
