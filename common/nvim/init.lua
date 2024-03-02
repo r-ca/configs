@@ -46,6 +46,10 @@ vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
 
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
+
+vim.keymap.set('n', 'J', ':AnyJump<CR>')
+vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
+
 -- Git
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
