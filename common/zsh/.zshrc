@@ -27,25 +27,25 @@ zinit light-mode for \
 
 ### rca
 ## alias ===================================================
-# ƒA[ƒLƒeƒNƒ`ƒƒØ‚è‘Ö‚¦
+# ï¿½Aï¿½[ï¿½Lï¿½eï¿½Nï¿½`ï¿½ï¿½ï¿½Ø‚ï¿½Ö‚ï¿½
 alias arm="exec arch -arch arm64e /bin/zsh --login"
 alias x64="exec arch -arch x86_64 /bin/zsh --login"
 
-# ls‚ğGNU”Å‚É’u‚«Š·‚¦‚é
+# lsï¿½ï¿½GNUï¿½Å‚É’uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #alias ls="gls --color=auto"
 
-# ƒvƒƒ“ƒvƒg‚Ìƒ‚[ƒhØ‚è‘Ö‚¦‚é“z
+# ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½vï¿½gï¿½Ìƒï¿½ï¿½[ï¿½hï¿½Ø‚ï¿½Ö‚ï¿½ï¿½ï¿½z
 alias sonanoka="export rca_shell_prompt_mode=normal && source ~/.zshrc"
 alias nanoka="export rca_shell_prompt_mode=presentation && source ~/.zshrc"
 alias nyashi="export rca_shell_prompt_mode=nyashi && source ~/.zshrc"
 
-# ƒVƒ‡[ƒgƒJƒbƒgŒn
+# ï¿½Vï¿½ï¿½ï¿½[ï¿½gï¿½Jï¿½bï¿½gï¿½n
 alias cl="clear"
 alias lsa="ls -a"
 alias lls="ls -l"
 alias llsa="ls -la"
 
-# ÄƒƒOƒCƒ“
+# ï¿½Äƒï¿½ï¿½Oï¿½Cï¿½ï¿½
 alias relogin="/bin/zsh --login"
 
 ## History =================================================
@@ -54,23 +54,23 @@ HISTSIZE=100000
 SAVEHIST=100000
 
 ## Plugin ==================================================
-# •âŠ®
+# ï¿½âŠ®
 autoload -Uz compinit && compinit
-# —š—ğ•âŠ®
+# ï¿½ï¿½ï¿½ï¿½âŠ®
 zinit light zsh-users/zsh-autosuggestions
 
-## ƒVƒ“ƒ^ƒbƒNƒXƒnƒCƒ‰ƒCƒg
+## ï¿½Vï¿½ï¿½ï¿½^ï¿½bï¿½Nï¿½Xï¿½nï¿½Cï¿½ï¿½ï¿½Cï¿½g
 zinit light zsh-users/zsh-syntax-highlighting
 
 ## Prompt ==================================================
 if [ -z "$rca_shell_prompt_mode" ]; then
-  export rca_shell_prompt_mode=normal # ‹K’è’l
+  export rca_shell_prompt_mode=normal # ï¿½Kï¿½ï¿½l
 fi
 
-# left-promptŒn ---------------------------------------------
+# left-promptï¿½n ---------------------------------------------
 if [ "$rca_shell_prompt_mode" = "normal" ]; then
-  function left-prompt { # normal(•’Ê‚Ì‚â‚Â)
-    # •¶šF
+  function left-prompt { # normal(ï¿½ï¿½ï¿½Ê‚Ì‚ï¿½ï¿½)
+    # ï¿½ï¿½ï¿½ï¿½ï¿½F
     local name_t='254m%}'
     local arch_t='250m%}'
     local name_b='176m%}'
@@ -79,21 +79,21 @@ if [ "$rca_shell_prompt_mode" = "normal" ]; then
     local arrow='097m%}'
     local text_color='%{\e[38;5;'
     local back_color='%{\e[30;48;5;'
-    # ƒŠƒZƒbƒg
+    # ï¿½ï¿½ï¿½Zï¿½bï¿½g
     local reset='%{\e[0m%}'
-    # }Œ`(‹æØ‚è)
+    # ï¿½}ï¿½`(ï¿½ï¿½Ø‚ï¿½)
     local sharp='\uE0B0'
-    # ƒA[ƒLƒeƒNƒ`ƒƒ
+    # ï¿½Aï¿½[ï¿½Lï¿½eï¿½Nï¿½`ï¿½ï¿½
     local arch=`uname -m`
 
     user="${back_color}${name_b}${text_color}${name_t}"
     dir="${back_color}${path_b}${text_color}${path_t}"
 
-    echo -e "${user}%n@%m ${text_color}${arch_t}(${arch})${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}¼(ßƒß)½ô > ${reset}"
+    echo -e "${user}%n@%m ${text_color}${arch_t}(${arch})${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}âŠ‚(ï¾Ÿãƒ®ï¾Ÿ)âŠƒ > ${reset}"
   }
 elif [ "$rca_shell_prompt_mode" = "presentation" ]; then
-  function left-prompt { # presentation(‰æ–Ê‹¤—L‚Æ‚©)
-    # •¶šF
+  function left-prompt { # presentation(ï¿½ï¿½Ê‹ï¿½ï¿½Lï¿½Æ‚ï¿½)
+    # ï¿½ï¿½ï¿½ï¿½ï¿½F
     local name_t='254m%}'
     local arch_t='250m%}'
     local name_b='234m%}'
@@ -102,11 +102,11 @@ elif [ "$rca_shell_prompt_mode" = "presentation" ]; then
     local arrow='097m%}'
     local text_color='%{\e[38;5;'
     local back_color='%{\e[30;48;5;'
-    # ƒŠƒZƒbƒg
+    # ï¿½ï¿½ï¿½Zï¿½bï¿½g
     local reset='%{\e[0m%}'
-    # }Œ`(‹æØ‚è)
+    # ï¿½}ï¿½`(ï¿½ï¿½Ø‚ï¿½)
     local sharp='\uE0B0'
-    # ƒA[ƒLƒeƒNƒ`ƒƒ
+    # ï¿½Aï¿½[ï¿½Lï¿½eï¿½Nï¿½`ï¿½ï¿½
     local arch=`uname -m`
 
     user="${back_color}${name_b}${text_color}${name_t}"
@@ -115,7 +115,7 @@ elif [ "$rca_shell_prompt_mode" = "presentation" ]; then
     echo -e "${user}%n@%m ${text_color}${arch_t}(${arch})${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}-> ${reset}"
   }
 elif [ "$rca_shell_prompt_mode" = "nyashi" ]; then
-  function left-prompt { #nyashi(SSHƒZƒbƒVƒ‡ƒ“‚Æ‚©‚Åg‚¤‚â‚Â)
+  function left-prompt { #nyashi(SSHï¿½Zï¿½bï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Ågï¿½ï¿½ï¿½ï¿½ï¿½)
     local arch=`uname -m`
     echo -e "%n@%m(${arch}) %~\n-> "
   }
@@ -124,12 +124,12 @@ fi
 PROMPT=`left-prompt`
 
 ## Options ==================================================
-# ŠÂ‹«•Ï”‚Ì•âŠ®
+# ï¿½Â‹ï¿½ï¿½Ïï¿½ï¿½Ì•âŠ®
 setopt AUTO_PARAM_KEYS
 
 export PATH="${PATH}:/home/rca/proj/miniique-devs"
 ## Other ====================================================
-# “ü—Í‚µ‚½•¶š‚©‚çn‚Ü‚éƒRƒ}ƒ“ƒh‚ğ—š—ğ‚©‚çŒŸõ‚µAã‰º–îˆó‚Å•âŠ®
+# ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½Ü‚ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ğ—š—ï¿½ï¿½ï¿½ï¿½çŒŸï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ã‰ºï¿½ï¿½ï¿½Å•âŠ®
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -138,7 +138,7 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
 ## functions ================================================
-## F‚ğˆê——‚Å•\¦‚·‚éŠÖ”
+## ï¿½Fï¿½ï¿½ï¿½ê——ï¿½Å•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öï¿½
 ## https://original-game.com/mini_howto/how-to-display-a-list-of-colors-with-zsh/
 colorlist() {
   for color in {000..015}; do
