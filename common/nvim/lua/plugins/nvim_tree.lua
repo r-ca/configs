@@ -10,7 +10,7 @@ return {
 					enable = true,
 				},
 				view = {
-					width = 30,
+					width = 50,
 				},
 				on_attach = function(bufnr)
 					local api = require 'nvim-tree.api'
