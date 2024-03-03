@@ -42,6 +42,8 @@ opt.tabstop = 2 -- Tab width
 opt.shiftwidth = 2 -- Indent width
 opt.expandtab = false -- Use spaces instead of tabs
 
+opt.laststatus = 3
+
 -- Keymaps
 vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
 

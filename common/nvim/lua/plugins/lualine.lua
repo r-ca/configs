@@ -6,6 +6,7 @@ return {
 		require('lualine').setup {
 			options = {
 				theme = 'nightfly',
+				globalstatus = true,
 				component_separators = '|',
 				section_separators = { left = '', right = '' },
 			},
