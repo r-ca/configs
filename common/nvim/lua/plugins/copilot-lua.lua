@@ -18,7 +18,7 @@ return {
 					auto_trigger = true,
 					keymap = {
 						-- TODO: 他のアクションのマップも追加する
-						accept = "<C-TAB>",
+						accept = "<A-TAB>",
 					},
 				}
 			})
