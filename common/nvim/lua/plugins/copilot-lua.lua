@@ -4,8 +4,24 @@ return {
 		cmd = 'Copilot',
 		event = 'InsertEnter',
 		config = function()
-			require('copilot').setup({})
-			vim.keymap.set('i', '<C-TAB>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
+			require('copilot').setup({
+				panel = {
+					enabled = true,
+					auto_refresh = true,
+					keymap = {
+						-- TODO: 他のアクションのマップも追加する
+						accept = "<CR>",
+					},
+				},
+				suggestion = {
+					enabled = true,
+					auto_trigger = true,
+					keymap = {
+						-- TODO: 他のアクションのマップも追加する
+						accept = "<C-TAB>",
+					},
+				}
+			})
 		end
 	}
 }
