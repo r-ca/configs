@@ -16,8 +16,6 @@ return {
 			-- Formatting selected code
 			vim.keymap.set("x", "rf", "<Plug>(coc-format-selected)", {silent = true})
 			vim.keymap.set("n", "rf", "<Plug>(coc-format-selected)", {silent = true})
-
-
 		end
 	}
 }
