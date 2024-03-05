@@ -52,6 +52,11 @@ vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 
+vim.keymap.set('i', '<C-h>', '<Left>')
+vim.keymap.set('i', '<C-l>', '<Right>')
+vim.keymap.set('i', '<C-j>', '<Down>')
+vim.keymap.set('i', '<C-k>', '<Up>')
+
 vim.keymap.set('n', 'J', ':AnyJump<CR>')
 vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
 
