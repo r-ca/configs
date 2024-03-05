@@ -38,8 +38,8 @@ opt.smartindent = true -- Smart indent
 opt.cursorline = true -- Highlight current line
 opt.number = true -- Show line numbers
 
-opt.tabstop = 2 -- Tab width
-opt.shiftwidth = 2 -- Indent width
+opt.tabstop = 4 -- Tab width
+opt.shiftwidth = 4 -- Indent width
 opt.expandtab = false -- Use spaces instead of tabs
 
 opt.laststatus = 3
