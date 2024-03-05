@@ -1,4 +1,5 @@
 {
+	"java.jdt.ls.vmargs": "-javaagent:/home/rca/configs/common/nvim/libs/lombok.jar",
 	"java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk",
 	"java.jdt.ls.statusIcons": {"busy": "Busy", "ready": "OK", "warning": "Warning", "Error": "Error"}
 }
