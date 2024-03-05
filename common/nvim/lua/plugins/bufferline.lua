@@ -18,6 +18,8 @@ return {
 					}
 				}
 			}
+			vim.keymap.set('n', '<S-O>', ':BufferLineCyclePrev<CR>')
+			vim.keymap.set('n', '<S-P>', ':BufferLineCycleNext<CR>')
 		end
 	}
 }
