@@ -27,6 +27,8 @@ require("lazy").setup({
     }
 })
 
+-- lsp
+--require('plugins.lsp.lang.java')
 -- Colorscheme
 vim.cmd[[colorscheme catppuccin]]
 -- vim.cmd[[colorscheme tokyonight-day]]
