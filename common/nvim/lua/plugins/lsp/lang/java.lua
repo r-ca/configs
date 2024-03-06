@@ -29,7 +29,8 @@ capabilities = require('plugins.lsp.ext.handlers').capabilities
 local config = {
 	cmd = {
 		jdtls_bin,
-		"-javaagent:" .. jdtls_path .. "/lombok.jar",
+		"--jvm-arg",
+		"\"-javaagent=" .. jdtls_path .. "/lombok.jar\"",
 		"-data", workspace_dir,
 		"-configuration", jdtls_path .. "/config_linux",
 	},
