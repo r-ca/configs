@@ -29,11 +29,15 @@ capabilities = require('plugins.lsp.ext.handlers').capabilities
 local config = {
 	cmd = {
 		jdtls_bin,
+		"-javaagent:" .. jdtls_path .. "/lombok.jar",
 		"-data", workspace_dir,
 		"-configuration", jdtls_path .. "/config_linux",
 	},
 
 	init_options = {
+		jvm_args = {
+			'-javaagent=/home/rca/.local/share/nvim/mason/packages/jdtls/lombok.jar',
+		},
 		workspace = workspace_dir,
 	},
 
