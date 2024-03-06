@@ -12,9 +12,9 @@ return {
 	},
 	config = function()
 		-- Setup Java
-		
+		require('plugins.lsp.ext.java')
 
-		local capabilities = require('cmp_nvim_lsp').default_capabilities()
+		local capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 		require('mason').setup()
 		require('mason-lspconfig').setup()
