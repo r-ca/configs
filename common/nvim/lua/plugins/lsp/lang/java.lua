@@ -30,9 +30,12 @@ local config = {
 	cmd = {
 		jdtls_bin,
 		"--jvm-arg",
-		"\"-javaagent=" .. jdtls_path .. "/lombok.jar\"",
+		--"\"-javaagent=" .. jdtls_path .. "/lombok.jar\"",
+		--"\"-javaagent=/home/rca/.local/share/nvim/mason/packages/jdtls/lombok.jar\"",
+		'\'-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar\'',
 		"-data", workspace_dir,
-		"-configuration", jdtls_path .. "/config_linux",
+		--"-configuration", jdtls_path .. "/config_linux",
+		"-configuration", "/home/rca/.local/share/nvim/mason/packages/jdtls/config_linux",
 	},
 
 	init_options = {
