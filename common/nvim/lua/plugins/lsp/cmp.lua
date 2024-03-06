@@ -29,7 +29,20 @@ return {
 
 			-- WIP(Copilotのサジェストそのままなのでいつかなおす)
 			mapping = {
-				['<C-p>'] = require('cmp').mapping.select_prev_item(),
+    			['<Tab>'] = cmp.mapping(function(fallback)
+      				if cmp.visible() then
+        				cmp.select_next_item()
+      				else
+        				fallback()
+					end
+    			end, { 'i' }),
+    			['<S-Tab>'] = function(fallback)
+      				if cmp.visible() then
+        				cmp.select_prev_item()
+      				else
+        				fallback()
+      				end
+    			end,
 				['<C-n>'] = require('cmp').mapping.select_next_item(),
 				['<C-d>'] = require('cmp').mapping.scroll_docs(-4),
 				['<C-f>'] = require('cmp').mapping.scroll_docs(4),
