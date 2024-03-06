@@ -1,8 +1,16 @@
+local on_attach = function(client, bufnr)
+
+	-- do something
+
+end
+
 return {
 	'williamboman/mason-lspconfig.nvim',
 	dependencies = {
 		{'williamboman/mason.nvim'},
 		{'neovim/nvim-lspconfig'},
+		{'hrsh7th/nvim-cmp'},
+		{'hrsh7th/cmp-nvim-lsp'},
 	},
 	config = function()
 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -12,6 +20,7 @@ return {
 		require('mason-lspconfig').setup_handlers {
 			function(server_name)
 				require('lspconfig')[server_name].setup {
+					on_attach = on_attach,
 					capabilities = capabilities,
 				}
 			end,

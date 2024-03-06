@@ -9,5 +9,37 @@ return {
 		{'onsails/lspkind-nvim'},
 	},
 	config = function()
+		require('cmp').setup({
+			snippet = {
+				expand = function(args)
+					require('luasnip').lsp_expand(args.body)
+				end,
+			},
+
+			sources = {
+				{ name = 'nvim_lsp' },
+				{ name = 'buffer' },
+				{ name = 'path' },
+				{ name = 'vsnip' },
+			},
+			
+			formatting = {
+				format = require('lspkind').cmp_format({with_text = true, maxwidth = 50})
+			},
+
+			-- WIP(Copilotのサジェストそのままなのでいつかなおす)
+			mapping = {
+				['<C-p>'] = require('cmp').mapping.select_prev_item(),
+				['<C-n>'] = require('cmp').mapping.select_next_item(),
+				['<C-d>'] = require('cmp').mapping.scroll_docs(-4),
+				['<C-f>'] = require('cmp').mapping.scroll_docs(4),
+				['<C-Space>'] = require('cmp').mapping.complete(),
+				['<C-e>'] = require('cmp').mapping.close(),
+				['<CR>'] = require('cmp').mapping.confirm({
+					behavior = require('cmp').ConfirmBehavior.Insert,
+					select = true,
+				}),
+			},
+		})
 	end
 }
