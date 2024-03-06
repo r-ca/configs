@@ -12,7 +12,7 @@ return {
 	},
 	config = function()
 		-- Setup Java
-		require('plugins.lsp.ext.java')
+		-- require('plugins.lsp.ext.java')
 
 		local capabilities = require('plugins.lsp.ext.handlers').capabilities
 
