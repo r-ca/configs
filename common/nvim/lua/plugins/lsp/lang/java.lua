@@ -12,7 +12,7 @@ return {
 		workspace_dir = share_dir .. "/eclipse/" .. project_name
 
 		-- Set proper Java executable
-		java_cmd = "/opt/java/jdk-21/bin/java"
+		java_cmd = "/usr/lib/jvm/java-21-openjdk/bin/java"
 		mason_registry = require("mason-registry")
 
 		-- vim.fn.glob Is needed to set paths using wildcard (*)
