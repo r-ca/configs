@@ -11,6 +11,8 @@ return {
 		{'neovim/nvim-lspconfig'},
 	},
 	config = function()
+		-- Setup nvim-java
+		require('java').setup()
 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 		require('mason').setup()
