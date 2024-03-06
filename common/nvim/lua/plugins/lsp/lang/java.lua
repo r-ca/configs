@@ -39,17 +39,19 @@ local config = {
 
 	capabilities = capabilities,
 
-	root_dir = {
+	--root_dir = {
         -- Single-module projects
-        {
-          'build.xml', -- Ant
-          'pom.xml', -- Maven
-          'settings.gradle', -- Gradle
-          'settings.gradle.kts', -- Gradle
-        },
+    --    {
+    --      'build.xml', -- Ant
+    --      'pom.xml', -- Maven
+    --      'settings.gradle', -- Gradle
+    --      'settings.gradle.kts', -- Gradle
+    --    },
         -- Multi-module projects
-        { 'build.gradle', 'build.gradle.kts' },
-      } or vim.fn.getcwd(),
+      --  { 'build.gradle', 'build.gradle.kts' },
+      --} or vim.fn.getcwd(),
+
+	root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
 
 	single_file_support	= true,
 	settings = {
