@@ -5,9 +5,11 @@ local on_attach = function(client, bufnr)
 end
 
 return {
-	"williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    dependencies = {
+		{'williamboman/mason.nvim'},
+		{'neovim/nvim-lspconfig'},
+	},
 	config = function()
 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
