@@ -5,7 +5,7 @@ return {
 	ft = { "java" },
 	config = function()
 		jdtls = require("jdtls")
-		handlers = require("lsp.handlers")
+		handlers = require("plugins.lsp.ext.handlers")
 
 		share_dir = os.getenv("HOME") .. "/.local/share"
 		project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
