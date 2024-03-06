@@ -46,7 +46,6 @@ return {
 				['<C-n>'] = require('cmp').mapping.select_next_item(),
 				['<C-d>'] = require('cmp').mapping.scroll_docs(-4),
 				['<C-f>'] = require('cmp').mapping.scroll_docs(4),
-				['<C-Space>'] = require('cmp').mapping.complete(),
 				['<C-e>'] = require('cmp').mapping.close(),
 				['<CR>'] = require('cmp').mapping.confirm({
 					behavior = require('cmp').ConfirmBehavior.Insert,
