@@ -14,7 +14,10 @@ end
 
 mason_registry = require("mason-registry")
 
-jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
+-- jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
+
+-- TODO: Fix this
+jdtls_path = '/home/rca/.local/share/nvim/mason/packages/jdtls'
 
 local config = {
 	cmd = { 
