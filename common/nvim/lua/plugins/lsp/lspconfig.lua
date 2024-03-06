@@ -17,7 +17,11 @@ return {
 		local capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 		require('mason').setup()
-		require('mason-lspconfig').setup()
+		require('mason-lspconfig').setup({
+			ensure_installed = {
+			--	"jdtls",
+			},
+		})
 		require('mason-lspconfig').setup_handlers {
 			function(server_name)
 				require('lspconfig')[server_name].setup {
