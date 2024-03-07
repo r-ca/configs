@@ -7,6 +7,7 @@ return {
 		{'hrsh7th/vim-vsnip'},
 		{'hrsh7th/cmp-vsnip'},
 		{'onsails/lspkind-nvim'},
+		{'zbirenbaum/copilot-cmp'}
 	},
 	config = function()
 		require('cmp').setup({
@@ -21,6 +22,7 @@ return {
 				{ name = 'buffer' },
 				{ name = 'path' },
 				{ name = 'vsnip' },
+				{ name = 'copilot' },
 			},
 			
 			formatting = {
