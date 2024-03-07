@@ -24,6 +24,10 @@ jdtls_bin = '/home/rca/.local/share/nvim/mason/bin/jdtls'
 -- java_binary = java_bin()
 java_binary = '/usr/lib/jvm/java-21-openjdk/bin/java'
 
+on_attach = function(client, bufnr)
+	require('plugins.lsp.ext.handlers').on_attach(client, bufnr)
+end
+
 capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 local config = {
@@ -65,6 +69,7 @@ local config = {
 
 	capabilities = capabilities,
 
+	on_attach = on_attach,
 	--root_dir = {
         -- Single-module projects
     --    {
