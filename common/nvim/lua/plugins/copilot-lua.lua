@@ -6,21 +6,21 @@ return {
 		config = function()
 			require('copilot').setup({
 				panel = {
-					enabled = true,
-					auto_refresh = true,
-					keymap = {
+					enabled = false,
+					-- auto_refresh = true,
+					-- keymap = {
 						-- TODO: 他のアクションのマップも追加する
-						accept = "<CR>",
-					},
+					-- 	accept = "<CR>",
+					-- },
 				},
 				suggestion = {
-					enabled = true,
-					auto_trigger = true,
-					keymap = {
+					enabled = false,
+					-- auto_trigger = true,
+					-- keymap = {
 						-- TODO: 他のアクションのマップも追加する
-						accept = "<S-Enter>",
-						dismiss = "<A-Tab>",
-					},
+					-- 	accept = "<S-Enter>",
+					-- 	dismiss = "<A-Tab>",
+					--},
 				}
 			})
 		end
