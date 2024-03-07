@@ -22,23 +22,23 @@ return {
 			--	"jdtls",
 			},
 		})
-		--require('mason-lspconfig').setup_handlers {
-		--	function(server_name)
-		--		require('lspconfig')[server_name].setup {
-		--			-- on_attach = on_attach,
-		--			capabilities = capabilities,
-		--		}
-		--	end,
-		--}
-		--
 		require('mason-lspconfig').setup_handlers {
-			["jdtls"] = function()
-				require('lspconfig').jdtls.setup {
-					on_attach = on_attach,
+			function(server_name)
+				require('lspconfig')[server_name].setup {
+					-- on_attach = on_attach,
 					capabilities = capabilities,
 				}
-			end,		
+			end,
 		}
+		
+		--require('mason-lspconfig').setup_handlers {
+		--	["jdtls"] = function()
+		--		require('lspconfig').jdtls.setup {
+		--			on_attach = on_attach,
+		--			capabilities = capabilities,
+		--		}
+		--	end,		
+		--}
 
 
 	end
