@@ -47,10 +47,10 @@ local config = {
 		'-Dlog.protocol=true',
 		'-Dlog.level=ALL',
 		'-Xmx1g',
+		'-javaagent:' .. jdtls_path .. '/lombok.jar',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
 		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-
 		'-jar', jdtls_path .. '/plugins/org.eclipse.equinox.launcher_1.6.700.v20231214-2017.jar',
 		'-configuration', jdtls_path .. '/config_linux',
 		'-data', workspace_dir,
@@ -90,6 +90,7 @@ local config = {
 
 return {
 	'mfussenegger/nvim-jdtls',
+	ft = {'java'},
 	config = function()
 		require('jdtls').start_or_attach(config)
 	end
