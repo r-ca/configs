@@ -52,7 +52,11 @@ return {
 				['<C-d>'] = require('cmp').mapping.scroll_docs(-4),
 				['<C-f>'] = require('cmp').mapping.scroll_docs(4),
 				['<C-e>'] = require('cmp').mapping.close(),
-				['<CR>'] = require('cmp').mapping.confirm({
+				-- ['<CR>'] = require('cmp').mapping.confirm({
+				-- 	behavior = require('cmp').ConfirmBehavior.Insert,
+				-- 	select = true,
+				-- }),
+				['<S-CR>'] = require('cmp').mapping.confirm({
 					behavior = require('cmp').ConfirmBehavior.Insert,
 					select = true,
 				}),
