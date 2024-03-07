@@ -31,20 +31,10 @@ end
 capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 local config = {
-	--cmd = {
-	--	jdtls_bin,
-	--	[[--jvm-arg="-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar"]],
-		--"\"-javaagent=" .. jdtls_path .. "/lombok.jar\"",
-		--"\"-javaagent=/home/rca/.local/share/nvim/mason/packages/jdtls/lombok.jar\"",
-		--'\'-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar\'',
-	--	"-data", workspace_dir,
-		--"-configuration", jdtls_path .. "/config_linux",
-	--	"-configuration", "/home/rca/.local/share/nvim/mason/packages/jdtls/config_linux",
-	--},
-	
+
 	cmd = {
 		java_binary,
-		
+
 		'-Declipse.application=org.eclipse.jdt.ls.core.id1',
 		'-Dosgi.bundles.defaultStartLevel=4',
 		'-Declipse.product=org.eclipse.jdt.ls.core.product',
@@ -60,27 +50,9 @@ local config = {
 		'-data', workspace_dir,
 	},
 
-	--init_options = {
-		--jvm_args = {
-		--	'-javaagent=/home/rca/.local/share/nvim/mason/packages/jdtls/lombok.jar',
-		--},
-		-- workspace = workspace_dir,
-	--},
-
 	capabilities = capabilities,
 
 	on_attach = on_attach,
-	--root_dir = {
-        -- Single-module projects
-    --    {
-    --      'build.xml', -- Ant
-    --      'pom.xml', -- Maven
-    --      'settings.gradle', -- Gradle
-    --      'settings.gradle.kts', -- Gradle
-    --    },
-        -- Multi-module projects
-      --  { 'build.gradle', 'build.gradle.kts' },
-      --} or vim.fn.getcwd(),
 
 	root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
 
