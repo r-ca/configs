@@ -1,0 +1,7 @@
+return {
+	'nvimtools/none-ls.nvim',
+	capabilities = require('plugins.lsp.ext.handlers').capabilities, 
+	sources = {
+		require('none')
+	}
+}
