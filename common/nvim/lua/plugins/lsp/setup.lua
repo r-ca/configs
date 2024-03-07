@@ -11,9 +11,8 @@ return {
 	'neovim/nvim-lspconfig',
 	config = function()
 		local lspconfig = require('lspconfig')
-		
+
 		-- Language servers
-	
 		-- lua
 		lspconfig.lua_ls.setup {
 			on_attach = on_attach,
@@ -22,6 +21,5 @@ return {
 
 		-- java
 		-- plugins/lsp/lang/java.lua
-	
 	end
 }
