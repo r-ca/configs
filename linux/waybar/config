@@ -36,14 +36,14 @@
     },
 
     "network#2": {
-        "format": "\uf077 {bandwidthUpBits} \uf078 {bandwidthDownBits}",
+        "format": "\uf077  {bandwidthUpBits} \uf078  {bandwidthDownBits}",
         "interval": 1,
         "min-length": 24
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} \uf293 {volume}%",
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} \uf293  {volume}%",
         "format-icons": {
             "default": [ "\uf026", "\uf027", "\uf028" ]
         },
@@ -53,13 +53,13 @@
     },
 
     "cpu": {
-        "format": "\uf2db {usage}%",
+        "format": "\uf2db  {usage}%",
         "interval": 1,
         "min-length": 9
     },
 
     "memory": {
-        "format": "\uf538 {used}/{total}GB",
+        "format": "\uf538  {used}/{total}GB",
         "interval": 10,
         "min-length": 18
     }
@@ -78,7 +78,7 @@
         "min-length": 24
     },
     "cpu": {
-        "format": "\uf2db {min_frequency} - {max_frequency}Ghz",
+        "format": "\uf2db  {min_frequency} - {max_frequency}Ghz",
         "interval": 1,
         "min-length": 18
     }
@@ -93,13 +93,13 @@
     "modules-center": ["bluetooth"],
     "modules-right": ["disk#1"],
     "disk#1": {
-        "format": "\uf0a0 {used}/{total}",
+        "format": "\uf0a0  {used}/{total}",
         "interval": 10,
         "min-length": 20
     },
     "bluetooth": {
         // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-        "format": " {num_connections} connected",
+        "format": "  {num_connections} connected",
         "format-connected": " {num_connections} connected",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
