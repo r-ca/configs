@@ -27,15 +27,33 @@ java_binary = '/usr/lib/jvm/java-21-openjdk/bin/java'
 capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 local config = {
-	cmd = {
-		jdtls_bin,
-		[[--jvm-arg="-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar"]],
+	--cmd = {
+	--	jdtls_bin,
+	--	[[--jvm-arg="-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar"]],
 		--"\"-javaagent=" .. jdtls_path .. "/lombok.jar\"",
 		--"\"-javaagent=/home/rca/.local/share/nvim/mason/packages/jdtls/lombok.jar\"",
 		--'\'-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar\'',
-		"-data", workspace_dir,
+	--	"-data", workspace_dir,
 		--"-configuration", jdtls_path .. "/config_linux",
-		"-configuration", "/home/rca/.local/share/nvim/mason/packages/jdtls/config_linux",
+	--	"-configuration", "/home/rca/.local/share/nvim/mason/packages/jdtls/config_linux",
+	--},
+	
+	cmd = {
+		java_binary,
+		
+		'-Declipse.application=org.eclipse.jdt.ls.core.id1',
+		'-Dosgi.bundles.defaultStartLevel=4',
+		'-Declipse.product=org.eclipse.jdt.ls.core.product',
+		'-Dlog.protocol=true',
+		'-Dlog.level=ALL',
+		'-Xmx1g',
+		'--add-modules=ALL-SYSTEM',
+		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
+		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+
+		'-jar', jdtls_path .. '/plugins/org.eclipse.equinox.launcher_1.6.700.v20231214-2017.jar',
+		'-configuration', jdtls_path .. '/config_linux',
+		'-data', workspace_dir,
 	},
 
 	--init_options = {
