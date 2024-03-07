@@ -45,15 +45,6 @@ M.on_attach = function(client, bufnr)
     set_signature_helper(client, bufnr)
     set_hover_border(client)
 
-	-- Insertでも解析を実行するように
-	vim.lsp.handlers['textDocument/publishDiagnostic'] = vim.lsp.with(
-		vim.lsp.diagnostic.on_publish_diagnostics, {
-			underline = true,
-			signs = true,
-			update_on_insert = true,
-		}
-	)
-
 	-- Keybindings
 	vim.keymap.set('n', 'an', '<cmd>lua vim.lsp.buf.hover()<CR>', { buffer = bufnr })
 	vim.keymap.set('n', 'dj', '<cmd>lua vim.lsp.buf.definition()<CR>', { buffer = bufnr })
