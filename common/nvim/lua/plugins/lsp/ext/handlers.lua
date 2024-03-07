@@ -50,7 +50,7 @@ M.on_attach = function(client, bufnr)
 		vim.lsp.diagnostic.on_publish_diagnostics, {
 			underline = true,
 			signs = true,
-			update_in_insert = true,
+			update_on_insert = true,
 		}
 	)
 

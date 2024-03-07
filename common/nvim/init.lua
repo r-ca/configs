@@ -27,6 +27,12 @@ require("lazy").setup({
     }
 })
 
+vim.diagnostic.config({
+	underline = true,
+	signs = true,
+	update_in_insert = true,
+})
+
 -- lsp
 --require('plugins.lsp.lang.java')
 -- Colorscheme
