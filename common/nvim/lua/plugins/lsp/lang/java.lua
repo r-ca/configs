@@ -56,7 +56,9 @@ local config = {
 	settings = {
 		java = {
 			signatureHelp = { enabled = true },
-
+			references = {
+				includeDecompiledSources = true,
+			}
 		}
 	}
 }
