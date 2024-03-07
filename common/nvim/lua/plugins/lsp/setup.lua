@@ -11,7 +11,7 @@ local on_attach = function(client, bufnr)
 
 end
 
-local capabilities = require('plugins.lsp.ext.headers').capabilities
+local capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 return {
 	'neovim/nvim-lspconfig',
