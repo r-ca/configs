@@ -1,9 +1,9 @@
 
-share_dir = os.getenv("HOME") .. "/.local/share"
-project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-workspace_dir = share_dir .. "/eclipse/" .. project_name
+local share_dir = os.getenv("HOME") .. "/.local/share"
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+local workspace_dir = share_dir .. "/eclipse/" .. project_name
 
-java_bin = function()
+local java_bin = function()
 	local java_home = os.getenv('JAVA_HOME')
 	if java_home then
 		return java_home .. '/bin/java'
@@ -12,23 +12,23 @@ java_bin = function()
 	end
 end
 
-mason_registry = require("mason-registry")
+local mason_registry = require("mason-registry")
 
 -- jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
 
 -- TODO: Fix this
-jdtls_path = '/home/rca/.local/share/nvim/mason/packages/jdtls'
+local jdtls_path = '/home/rca/.local/share/nvim/mason/packages/jdtls'
 
-jdtls_bin = '/home/rca/.local/share/nvim/mason/bin/jdtls'
+local jdtls_bin = '/home/rca/.local/share/nvim/mason/bin/jdtls'
 
 -- java_binary = java_bin()
-java_binary = '/usr/lib/jvm/java-21-openjdk/bin/java'
+local java_binary = '/usr/lib/jvm/java-21-openjdk/bin/java'
 
-on_attach = function(client, bufnr)
+local on_attach = function(client, bufnr)
 	require('plugins.lsp.ext.handlers').on_attach(client, bufnr)
 end
 
-capabilities = require('plugins.lsp.ext.handlers').capabilities
+local capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 local config = {
 
