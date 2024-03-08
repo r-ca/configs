@@ -30,6 +30,8 @@ local config = {
 
 	autostart = true,
 
+	filetypes = { 'java' },
+
 	cmd = {
 		java_binary,
 
@@ -53,6 +55,11 @@ local config = {
 	on_attach = on_attach,
 
 	root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+
+	flags = {
+		debounce_text_changes = 150,
+		allow_incremental_sync = true,
+	},
 
 	single_file_support	= true,
 	settings = {
