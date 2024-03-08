@@ -57,25 +57,36 @@ opt.laststatus = 3
 -- Keymaps
 vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
 
+-- Window navigation
+-- in normal
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 
+-- in terminal
+vim.keymap.set('t', '<C-h>', '<C-\\><C-N>:wincmd h<CR>')
+vim.keymap.set('t', '<C-l>', '<C-\\><C-N>:wincmd l<CR>')
+vim.keymap.set('t', '<C-j>', '<C-\\><C-N>:wincmd j<CR>')
+vim.keymap.set('t', '<C-k>', '<C-\\><C-N>:wincmd k<CR>')
+
+-- Cursor navigation (Insert)
 vim.keymap.set('i', '<C-h>', '<Left>')
 vim.keymap.set('i', '<C-l>', '<Right>')
 vim.keymap.set('i', '<C-j>', '<Down>')
 vim.keymap.set('i', '<C-k>', '<Up>')
 
+
+-- AnyJump
 vim.keymap.set('n', 'J', ':AnyJump<CR>')
 vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
 
+-- Tab navigation
 vim.keymap.set('n', '<C-S-p>', ':tabNext<CR>')
 vim.keymap.set('n', '<C-S-o>', ':tabPrevious<CR>')
 
 vim.keymap.set('i', '<C-S-p>', '<cmd>:tabNext<CR>')
 vim.keymap.set('i', '<C-S-o>', '<cmd>:tabPrevious<CR>')
-
 
 
 -- LazyGit
