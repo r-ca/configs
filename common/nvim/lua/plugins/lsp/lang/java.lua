@@ -28,6 +28,8 @@ local capabilities = require('plugins.lsp.ext.handlers').capabilities
 
 local config = {
 
+	autostart = true,
+
 	cmd = {
 		java_binary,
 

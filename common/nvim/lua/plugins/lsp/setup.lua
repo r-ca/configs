@@ -15,6 +15,7 @@ return {
 		-- Language servers
 		-- lua
 		lspconfig.lua_ls.setup {
+			autostart = true,
 			on_attach = on_attach,
 			capabilities = capabilities
 		}
