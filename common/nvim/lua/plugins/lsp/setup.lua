@@ -20,6 +20,7 @@ return {
 			capabilities = capabilities
 		}
 
-		-- java
+		-- Vue
+		lspconfig.vuels.setup({})
 	end
 }
