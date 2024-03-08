@@ -58,8 +58,7 @@ opt.laststatus = 3
 -- Back to normal
 vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
 vim.keymap.set('t', 'ii', '<C-\\><C-n>')
-
-
+vim.keymap.set('v', 'ii', '<Esc>')
 
 -- Window navigation
 -- in normal
