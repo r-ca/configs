@@ -84,11 +84,21 @@ vim.keymap.set('n', 'J', ':AnyJump<CR>')
 vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
 
 -- Tab navigation
-vim.keymap.set('n', '<C-S-p>', ':tabNext<CR>')
-vim.keymap.set('n', '<C-S-o>', ':tabPrevious<CR>')
+-- in normal
+vim.keymap.set('n', '<C-S-p>', ':tabNext<CR>', { noremap = false })
+vim.keymap.set('n', '<C-S-o>', ':tabprevious<CR>', { noremap = false })
 
-vim.keymap.set('i', '<C-S-p>', '<cmd>:tabNext<CR>')
-vim.keymap.set('i', '<C-S-o>', '<cmd>:tabPrevious<CR>')
+-- in insert
+vim.keymap.set('i', '<C-S-p>', '<cmd>:tabNext<CR>', { noremap = false })
+vim.keymap.set('i', '<C-S-o>', '<cmd>:tabprevious<CR>', { noremap = false })
+
+-- in terminal
+vim.keymap.set('t', '<C-S-p>', '<C-\\><C-N>:tabNext<CR>', { noremap = false })
+vim.keymap.set('t', '<C-S-o>', '<C-\\><C-N>:tabprevious<CR>', { noremap = false })
+
+-- in command
+vim.keymap.set('c', '<C-S-p>', '<C-\\><C-N>:tabNext<CR>', { noremap = false })
+vim.keymap.set('c', '<C-S-o>', '<C-\\><C-N>:tabprevious<CR>', { noremap = false })
 
 -- Tab manage
 vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = false })
