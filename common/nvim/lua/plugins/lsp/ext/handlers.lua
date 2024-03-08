@@ -47,9 +47,9 @@ M.on_attach = function(client, bufnr)
 
 	-- Keybindings
 	vim.keymap.set('n', '<Space>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = false, buffer = bufnr })
-	vim.keymap.set('n', 'dj', '<cmd>lua vim.lsp.buf.definition()<CR>', { buffer = bufnr })
-	vim.keymap.set('n', 'rf', '<cmd>lua vim.lsp.buf.formatting()<CR>', { buffer = bufnr })
-	vim.keymap.set('n', '<S-Space>', '<cmd>lua vim.lsp.buf.references()<CR>', { buffer = bufnr })
+	vim.keymap.set('n', '<S-Space>', '<cmd>lua vim.lsp.buf.definition()<CR>', { buffer = bufnr })
+	vim.keymap.set('n', 'fm', '<cmd>lua vim.lsp.buf.formatting()<CR>', { buffer = bufnr })
+	vim.keymap.set('n', 'rf', '<cmd>lua vim.lsp.buf.references()<CR>', { buffer = bufnr })
 	vim.keymap.set('n', 'rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { buffer = bufnr })
 end
 
