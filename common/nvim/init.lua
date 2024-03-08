@@ -55,7 +55,11 @@ opt.expandtab = false -- Use spaces instead of tabs
 opt.laststatus = 3
 
 -- Keymaps
+-- Back to normal
 vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
+vim.keymap.set('t', 'ii', '<C-\\><C-n>')
+
+
 
 -- Window navigation
 -- in normal
@@ -87,6 +91,11 @@ vim.keymap.set('n', '<C-S-o>', ':tabPrevious<CR>')
 
 vim.keymap.set('i', '<C-S-p>', '<cmd>:tabNext<CR>')
 vim.keymap.set('i', '<C-S-o>', '<cmd>:tabPrevious<CR>')
+
+-- Tab manage
+vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = false })
+vim.keymap.set('n', '<C-w>', ':tabclose<CR>', { noremap = false })
+
 
 
 -- LazyGit
