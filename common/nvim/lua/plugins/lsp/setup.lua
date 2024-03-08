@@ -21,6 +21,5 @@ return {
 		}
 
 		-- java
-		-- plugins/lsp/lang/java.lua
 	end
 }
