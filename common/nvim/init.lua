@@ -80,7 +80,6 @@ vim.keymap.set('i', '<C-l>', '<Right>')
 vim.keymap.set('i', '<C-j>', '<Down>')
 vim.keymap.set('i', '<C-k>', '<Up>')
 
-
 -- AnyJump
 vim.keymap.set('n', 'J', ':AnyJump<CR>')
 vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
@@ -96,7 +95,8 @@ vim.keymap.set('i', '<C-S-o>', '<cmd>:tabPrevious<CR>')
 vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = false })
 vim.keymap.set('n', '<C-w>', ':tabclose<CR>', { noremap = false })
 
-
+-- misc
+vim.keymap.set('i', '<S-BS>', '<C-w>')
 
 -- LazyGit
 local Terminal = require('toggleterm.terminal').Terminal
