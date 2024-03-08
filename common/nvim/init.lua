@@ -70,6 +70,14 @@ vim.keymap.set('i', '<C-k>', '<Up>')
 vim.keymap.set('n', 'J', ':AnyJump<CR>')
 vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
 
+vim.keymap.set('n', '<C-S-p>', ':tabNext<CR>')
+vim.keymap.set('n', '<C-S-o>', ':tabPrevious<CR>')
+
+vim.keymap.set('i', '<C-S-p>', '<cmd>:tabNext<CR>')
+vim.keymap.set('i', '<C-S-o>', '<cmd>:tabPrevious<CR>')
+
+
+
 -- LazyGit
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
