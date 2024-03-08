@@ -22,5 +22,8 @@ return {
 
 		-- Vue
 		lspconfig.vuels.setup({})
+
+		-- CSS
+		lspconfig.cssls.setup{}
 	end
 }
