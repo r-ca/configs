@@ -21,9 +21,17 @@ return {
 		}
 
 		-- Vue
-		lspconfig.vuels.setup({})
+		lspconfig.vuels.setup{
+			autostart = true,
+			on_attach = on_attach,
+			capabilities = capabilities
+		}
 
 		-- CSS
-		lspconfig.cssls.setup{}
+		lspconfig.cssls.setup{
+			autostart = true,
+			on_attach = on_attach,
+			capabilities = capabilities
+		}
 	end
 }
