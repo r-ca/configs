@@ -34,14 +34,14 @@ return {
 
 			-- WIP(Copilotのサジェストそのままなのでいつかなおす)
 			mapping = {
-    			['<Tab>'] = require('cmp').mapping(function(fallback)
+    			['<A-Tab>'] = require('cmp').mapping(function(fallback)
       				if require('cmp').visible() then
         				require('cmp').select_next_item()
       				else
         				fallback()
 					end
     			end, { 'i' }),
-    			['<S-Tab>'] = function(fallback)
+    			['<A-S-Tab>'] = function(fallback)
       				if require('cmp').visible() then
         				require('cmp').select_prev_item()
       				else
