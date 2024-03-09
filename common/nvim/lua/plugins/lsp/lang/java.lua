@@ -1,3 +1,12 @@
+
+
+return {
+	'mfussenegger/nvim-jdtls',
+	dependencies = {
+		'neovim/nvim-lspconfig'
+	},
+	-- ft = { "java" },
+	config = function()
 local share_dir = os.getenv("HOME") .. "/.local/share"
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = share_dir .. "/eclipse/" .. project_name
@@ -105,18 +114,21 @@ local config = {
             		"java.util.Objects.requireNonNullElse",
             		"org.mockito.Mockito.*"
             	}
-			}
+			},
+			configuration = {
+				updateBuildConfiguration = 'interactive',
+			},
+			maven = {
+				downloadSources= true
+			},
+			inlayHints = {
+				parameterNames = {
+					enabled = 'all'
+				}
+			},
 		}
 	}
 }
-
-return {
-	'mfussenegger/nvim-jdtls',
-	dependencies = {
-		'neovim/nvim-lspconfig'
-	},
-	-- ft = { "java" },
-	config = function()
 		-- Add language server attach auto cmd
 		vim.api.nvim_create_augroup('java-ls', { clear = true })
 		vim.api.nvim_create_autocmd(
