@@ -74,6 +74,12 @@ vim.keymap.set('t', '<C-l>', '<C-\\><C-N>:wincmd l<CR>')
 vim.keymap.set('t', '<C-j>', '<C-\\><C-N>:wincmd j<CR>')
 vim.keymap.set('t', '<C-k>', '<C-\\><C-N>:wincmd k<CR>')
 
+-- move window
+vim.keymap.set('n', '<C-S-h>', '<cmd>wincmd H<CR>', { noremap = false })
+vim.keymap.set('n', '<C-S-l>', '<cmd>wincmd L<CR>', { noremap = false })
+vim.keymap.set('n', '<C-S-j>', '<cmd>wincmd J<CR>', { noremap = false })
+vim.keymap.set('n', '<C-S-k>', '<cmd>wincmd K<CR>', { noremap = false })
+
 -- Cursor navigation (Insert)
 vim.keymap.set('i', '<C-h>', '<Left>')
 vim.keymap.set('i', '<C-l>', '<Right>')
