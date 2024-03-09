@@ -24,22 +24,23 @@ local on_attach = function(client, bufnr)
 	require('plugins.lsp.ext.handlers').on_attach(client, bufnr)
 end
 
--- local capabilities = require('plugins.lsp.ext.handlers').capabilities
+local capabilities = require('plugins.lsp.ext.handlers').capabilities
+local extended_capabilities = require('jdtls').extendedClientCapabilities
+extended_capabilities.resolveAdditionalTextEditsSupport = true
 
-
-  local capabilities = {
-    workspace = {
-      configuration = true
-    },
-    textDocument = {
-      completion = {
-        completionItem = {
-          snippetSupport = true
-        }
-      }
-    }
-  }
-
+-- local capabilities = {
+--     workspace = {
+--       configuration = true
+--     },
+--     textDocument = {
+--       completion = {
+--         completionItem = {
+--           snippetSupport = true
+--         }
+--       }
+--     }
+--   }
+-- 
 local config = {
 
 	autostart = true,
@@ -54,8 +55,9 @@ local config = {
 		'-Declipse.product=org.eclipse.jdt.ls.core.product',
 		'-Dlog.protocol=true',
 		'-Dlog.level=ALL',
-		'-Xmx48g',
-		'-javaagent:' .. jdtls_path .. '/lombok.jar',
+		'-Xmx16g',
+		-- '-javaagent:' .. jdtls_path .. '/lombok.jar',
+		'-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
 		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
@@ -65,6 +67,8 @@ local config = {
 	},
 
 	capabilities = capabilities,
+
+	extendedClientCapabilities = extended_capabilities,
 
 	on_attach = on_attach,
 
