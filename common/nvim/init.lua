@@ -47,6 +47,7 @@ opt.smartindent = true -- Smart indent
 
 opt.cursorline = true -- Highlight current line
 opt.number = true -- Show line numbers
+opt.numberwidth = 5 -- Line number width
 
 opt.tabstop = 4 -- Tab width
 opt.shiftwidth = 4 -- Indent width
@@ -85,25 +86,25 @@ vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
 
 -- Tab navigation
 -- in normal
-vim.keymap.set('n', '<C-S-p>', ':tabNext<CR>', { noremap = false })
-vim.keymap.set('n', '<C-S-o>', ':tabprevious<CR>', { noremap = false })
-
--- in insert
-vim.keymap.set('i', '<C-S-p>', '<cmd>tabNext<CR>', { noremap = false })
-vim.keymap.set('i', '<C-S-o>', '<cmd>tabprevious<CR>', { noremap = false })
-
--- in terminal
-vim.keymap.set('t', '<C-S-p>', '<C-\\><C-N>:tabNext<CR>', { noremap = false })
-vim.keymap.set('t', '<C-S-o>', '<C-\\><C-N>:tabprevious<CR>', { noremap = false })
-
--- in command
-vim.keymap.set('c', '<C-S-p>', '<C-\\><C-N>:tabNext<CR>', { noremap = false })
-vim.keymap.set('c', '<C-S-o>', '<C-\\><C-N>:tabprevious<CR>', { noremap = false })
-
--- Tab manage
-vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = false })
-vim.keymap.set('n', '<C-w>', ':tabclose<CR>', { noremap = false })
-
+-- vim.keymap.set('n', '<C-S-p>', '<cmd>tabNext<CR>', { noremap = false })
+-- vim.keymap.set('n', '<C-S-o>', '<cmd>tabprevious<CR>', { noremap = false })
+--
+-- -- in insert
+-- vim.keymap.set('i', '<C-S-p>', '<cmd>tabNext<CR>', { noremap = false })
+-- vim.keymap.set('i', '<C-S-o>', '<cmd>tabprevious<CR>', { noremap = false })
+--
+-- -- in terminal
+-- vim.keymap.set('t', '<C-S-p>', '<C-\\><C-N>:tabNext<CR>', { noremap = false })
+-- vim.keymap.set('t', '<C-S-o>', '<C-\\><C-N>:tabprevious<CR>', { noremap = false })
+--
+-- -- in command
+-- vim.keymap.set('c', '<C-S-p>', '<C-\\><C-N>:tabNext<CR>', { noremap = false })
+-- vim.keymap.set('c', '<C-S-o>', '<C-\\><C-N>:tabprevious<CR>', { noremap = false })
+--
+-- -- Tab manage
+-- vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = false })
+-- vim.keymap.set('n', '<C-w>', ':tabclose<CR>', { noremap = false })
+--
 -- misc
 vim.keymap.set('i', '<S-BS>', '<C-w>')
 
