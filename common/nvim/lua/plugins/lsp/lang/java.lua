@@ -17,14 +17,28 @@ local mason_registry = require("mason-registry")
 local jdtls_path = '/home/rca/.local/share/nvim/mason/packages/jdtls'
 -- jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
 
-local java_binary = '/usr/lib/jvm/java-21-openjdk/bin/java'
+local java_binary = '/usr/lib/jvm/java-17-openjdk/bin/java'
 -- java_binary = java_bin()
 
 local on_attach = function(client, bufnr)
 	require('plugins.lsp.ext.handlers').on_attach(client, bufnr)
 end
 
-local capabilities = require('plugins.lsp.ext.handlers').capabilities
+-- local capabilities = require('plugins.lsp.ext.handlers').capabilities
+
+
+  local capabilities = {
+    workspace = {
+      configuration = true
+    },
+    textDocument = {
+      completion = {
+        completionItem = {
+          snippetSupport = true
+        }
+      }
+    }
+  }
 
 local config = {
 
@@ -40,7 +54,7 @@ local config = {
 		'-Declipse.product=org.eclipse.jdt.ls.core.product',
 		'-Dlog.protocol=true',
 		'-Dlog.level=ALL',
-		'-Xmx1g',
+		'-Xmx48g',
 		'-javaagent:' .. jdtls_path .. '/lombok.jar',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
@@ -57,16 +71,36 @@ local config = {
 	root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
 
 	flags = {
-		debounce_text_changes = 150,
+		-- debounce_text_changes = 150,
 		allow_incremental_sync = true,
 	},
 
 	single_file_support	= true,
 	settings = {
 		java = {
+			eclipse = {
+				downloadSources = true,
+			},
+			referencesCodeLens = {
+				enabled = true
+			},
+			contentProvider = {
+				preferred = 'fernflower'
+			},
 			signatureHelp = { enabled = true },
 			references = {
 				includeDecompiledSources = true,
+			},
+			completion = {
+            	favoriteStaticMembers = {
+            		"org.hamcrest.MatcherAssert.assertThat",
+            		"org.hamcrest.Matchers.*",
+            		"org.hamcrest.CoreMatchers.*",
+            		"org.junit.jupiter.api.Assertions.*",
+            		"java.util.Objects.requireNonNull",
+            		"java.util.Objects.requireNonNullElse",
+            		"org.mockito.Mockito.*"
+            	}
 			}
 		}
 	}
@@ -77,7 +111,7 @@ return {
 	dependencies = {
 		'neovim/nvim-lspconfig'
 	},
-	ft = { "java" },
+	-- ft = { "java" },
 	config = function()
 		-- Add language server attach auto cmd
 		vim.api.nvim_create_augroup('java-ls', { clear = true })
