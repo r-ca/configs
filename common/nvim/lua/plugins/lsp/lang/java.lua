@@ -74,8 +74,25 @@ local config = {
 
 return {
 	'mfussenegger/nvim-jdtls',
+	dependencies = {
+		'neovim/nvim-lspconfig'
+	},
 	ft = { "java" },
 	config = function()
+		-- Add language server attach auto cmd
+		vim.api.nvim_create_augroup('java-ls', { clear = true })
+		vim.api.nvim_create_autocmd(
+			{ 'FileType' },
+			{
+				pattern = 'java',
+				group = 'java-ls',
+				callback = function()
+					require('jdtls').start_or_attach(config)
+				end
+			}
+		)
+
+		-- Init and attach
 		require('jdtls').start_or_attach(config)
 	end
 }
