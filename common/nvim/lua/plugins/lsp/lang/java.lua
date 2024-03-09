@@ -66,7 +66,7 @@ local config = {
 		'-Dlog.level=ALL',
 		'-Xmx16g',
 		-- '-javaagent:' .. jdtls_path .. '/lombok.jar',
-		'-javaagent:/home/rca/configs/common/nvim/libs/lombok-1.18.30.jar',
+		'-javaagent:/home/rca/configs/common/nvim/libs/lombok-edge-1.18.31.jar',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
 		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
@@ -77,7 +77,7 @@ local config = {
 
 	capabilities = capabilities,
 
-	extendedClientCapabilities = extended_capabilities,
+	-- extendedClientCapabilities = extended_capabilities,
 
 	on_attach = on_attach,
 
@@ -126,6 +126,14 @@ local config = {
 					enabled = 'all'
 				}
 			},
+			extendedClientCapabilities = extended_capabilities,
+			sources = {
+				organizeImports = {
+					-- onSave = true,
+					starThreshold = 9999,
+					staticStarThreshold = 9999
+				}
+			}
 		}
 	}
 }
