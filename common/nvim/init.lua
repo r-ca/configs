@@ -89,8 +89,8 @@ vim.keymap.set('n', '<C-S-p>', ':tabNext<CR>', { noremap = false })
 vim.keymap.set('n', '<C-S-o>', ':tabprevious<CR>', { noremap = false })
 
 -- in insert
-vim.keymap.set('i', '<C-S-p>', '<cmd>:tabNext<CR>', { noremap = false })
-vim.keymap.set('i', '<C-S-o>', '<cmd>:tabprevious<CR>', { noremap = false })
+vim.keymap.set('i', '<C-S-p>', '<cmd>tabNext<CR>', { noremap = false })
+vim.keymap.set('i', '<C-S-o>', '<cmd>tabprevious<CR>', { noremap = false })
 
 -- in terminal
 vim.keymap.set('t', '<C-S-p>', '<C-\\><C-N>:tabNext<CR>', { noremap = false })
