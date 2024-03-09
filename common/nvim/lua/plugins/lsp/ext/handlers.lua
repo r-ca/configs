@@ -46,11 +46,18 @@ M.on_attach = function(client, bufnr)
     set_hover_border(client)
 
 	-- Keybindings
-	vim.keymap.set('n', '<Space>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = false, buffer = bufnr })
-	vim.keymap.set('n', '<S-Space>', '<cmd>lua vim.lsp.buf.definition()<CR>', { buffer = bufnr })
-	vim.keymap.set('n', 'fm', '<cmd>lua vim.lsp.buf.formatting()<CR>', { buffer = bufnr })
-	vim.keymap.set('n', 'rf', '<cmd>lua vim.lsp.buf.references()<CR>', { buffer = bufnr })
-	vim.keymap.set('n', 'rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { buffer = bufnr })
+	vim.keymap.set('n', '<Space>', '<cmd>lua vim.lsp.buf.hover()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', '<S-d>', '<cmd>lua vim.lsp.buf.definition()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', 'fm', '<cmd>lua vim.lsp.buf.formatting()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', 'rf', '<cmd>lua vim.lsp.buf.references()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', 'rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { remap = true, buffer = bufnr })
+
+	-- rewrite
+	-- vim.api.nvim_buf_set_keymap('n', '<Space>', [[<cmd>lua vim.lsp.buf.hover()<CR>]], { noremap = false, silent = true, buffer = bufnr })
+	-- vim.api.nvim_buf_set_keymap('n', '<S-Space>', [[<cmd>lua vim.lsp.buf.definition()<CR>]], { noremap = false, silent = true, buffer = bufnr })
+	-- vim.api.nvim_buf_set_keymap('n', 'fm', [[<cmd>lua vim.lsp.buf.formatting()<CR>]], { noremap = false, silent = true, buffer = bufnr })
+	-- vim.api.nvim_buf_set_keymap('n', 'rf', [[<cmd>lua vim.lsp.buf.references()<CR>]], { noremap = false, silent = true, buffer = bufnr })
+	-- vim.api.nvim_buf_set_keymap('n', 'rn', [[<cmd>lua vim.lsp.buf.rename()<CR>]], { noremap = false, silent = true, buffer = bufnr })
 end
 
 M.capabilities = require("cmp_nvim_lsp").default_capabilities()
