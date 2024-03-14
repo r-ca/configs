@@ -108,6 +108,15 @@ vim.keymap.set('n', 'K', ':AnyJumpBack<CR>')
 -- misc
 vim.keymap.set('i', '<S-BS>', '<C-w>')
 
+-- barbar
+-- Move to previous/next
+vim.keymap.set('n', '<S-l>', '<cmd>BufferPrevious<CR>')
+vim.keymap.set('n', '<S-h>', '<cmd>BufferNext<CR>')
+-- Pin
+vim.keymap.set('n', '<A-p>', '<cmd>BufferPin<CR>')
+-- Close
+vim.keymap.set('n', '<A-c>', '<cmd>BufferClose<CR>')
+
 -- LazyGit
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
