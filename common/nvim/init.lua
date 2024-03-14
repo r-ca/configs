@@ -47,7 +47,7 @@ opt.smartindent = true -- Smart indent
 
 opt.cursorline = true -- Highlight current line
 opt.number = true -- Show line numbers
-opt.numberwidth = 5 -- Line number width
+-- opt.numberwidth = 5 -- Line number width
 
 opt.tabstop = 4 -- Tab width
 opt.shiftwidth = 4 -- Indent width
@@ -116,6 +116,8 @@ vim.keymap.set('n', '<S-h>', '<cmd>BufferNext<CR>')
 vim.keymap.set('n', '<A-p>', '<cmd>BufferPin<CR>')
 -- Close
 vim.keymap.set('n', '<A-c>', '<cmd>BufferClose<CR>')
+
+vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
 
 -- LazyGit
 local Terminal = require('toggleterm.terminal').Terminal
