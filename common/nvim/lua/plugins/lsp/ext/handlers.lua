@@ -51,7 +51,10 @@ M.on_attach = function(client, bufnr)
 	vim.keymap.set('n', 'efm', '<cmd>lua vim.lsp.buf.formatting()<CR>', { remap = true, buffer = bufnr })
 	vim.keymap.set('n', 'erf', '<cmd>lua vim.lsp.buf.references()<CR>', { remap = true, buffer = bufnr })
 	vim.keymap.set('n', 'ern', '<cmd>lua vim.lsp.buf.rename()<CR>', { remap = true, buffer = bufnr })
-	vim.keymap.set('n', 'efx', '<cmd>lua vim.lsp.buf.code_action()<CR>', { remap = true, buffer = bufnr })
+	-- vim.keymap.set('n', 'efx', '<cmd>lua vim.lsp.buf.code_action()<CR>', { remap = true, buffer = bufnr })
+
+	-- Rewrite LSP saga
+	vim.keymap.set('n', 'efx', '<cmd>Lspsaga code_action<CR>', { remap = true, buffer = bufnr })
 
 	-- rewrite
 	-- vim.api.nvim_buf_set_keymap('n', '<Space>', [[<cmd>lua vim.lsp.buf.hover()<CR>]], { noremap = false, silent = true, buffer = bufnr })
