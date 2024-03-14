@@ -21,11 +21,18 @@ return {
 		}
 
 		-- Vue
-		lspconfig.vuels.setup{
-			autostart = true,
-			on_attach = on_attach,
-			capabilities = capabilities
-		}
+		-- lspconfig.vuels.setup{
+		-- 	autostart = true,
+		-- 	on_attach = on_attach,
+		-- 	capabilities = capabilities
+		-- }
+
+        -- Vue3
+        lspconfig.volar.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
 
 		-- CSS
 		lspconfig.cssls.setup{
@@ -37,5 +44,38 @@ return {
 		-- TS/JS
 		lspconfig.configs.vtsls = require('vtsls').lspconfig
 		lspconfig.vtsls.setup({})
-	end
+
+		-- Python
+		lspconfig.pylsp.setup{
+			-- autostart = true,
+			-- on_attach = on_attach,
+			-- capabilities = capabilities
+		}
+
+		-- lspconfig.pyright.setup{
+			-- autostart = true,
+			-- on_attach = on_attach,
+			-- capabilities = capabilities
+		-- }
+		
+		-- Bash
+		lspconfig.bashls.setup{
+			autostart = true,
+			on_attach = on_attach,
+			capabilities = capabilities
+		}
+
+        -- PHP
+        lspconfig.phpactor.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
+
+        lspconfig.tsserver.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
+    end
 }
