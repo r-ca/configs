@@ -48,9 +48,10 @@ M.on_attach = function(client, bufnr)
 	-- Keybindings
 	vim.keymap.set('n', '<Space>', '<cmd>lua vim.lsp.buf.hover()<CR>', { remap = true, buffer = bufnr })
 	vim.keymap.set('n', '<S-d>', '<cmd>lua vim.lsp.buf.definition()<CR>', { remap = true, buffer = bufnr })
-	vim.keymap.set('n', 'fm', '<cmd>lua vim.lsp.buf.formatting()<CR>', { remap = true, buffer = bufnr })
-	vim.keymap.set('n', 'rf', '<cmd>lua vim.lsp.buf.references()<CR>', { remap = true, buffer = bufnr })
-	vim.keymap.set('n', 'rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', 'efm', '<cmd>lua vim.lsp.buf.formatting()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', 'erf', '<cmd>lua vim.lsp.buf.references()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', 'ern', '<cmd>lua vim.lsp.buf.rename()<CR>', { remap = true, buffer = bufnr })
+	vim.keymap.set('n', 'efx', '<cmd>lua vim.lsp.buf.code_action()<CR>', { remap = true, buffer = bufnr })
 
 	-- rewrite
 	-- vim.api.nvim_buf_set_keymap('n', '<Space>', [[<cmd>lua vim.lsp.buf.hover()<CR>]], { noremap = false, silent = true, buffer = bufnr })
