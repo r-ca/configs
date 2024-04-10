@@ -19,6 +19,7 @@ return {
 
 			sources = {
 				{ name = 'nvim_lsp' },
+				{ name = 'nvim_lsp_signature_help'},
 				{ name = 'buffer' },
 				{ name = 'path' },
 				{ name = 'vsnip' },
@@ -34,14 +35,14 @@ return {
 
 			-- WIP(Copilotのサジェストそのままなのでいつかなおす)
 			mapping = {
-    			['<Tab>'] = require('cmp').mapping(function(fallback)
+    			['<S-Tab>'] = require('cmp').mapping(function(fallback)
       				if require('cmp').visible() then
         				require('cmp').select_next_item()
       				else
         				fallback()
 					end
     			end, { 'i' }),
-    			['<S-Tab>'] = function(fallback)
+    			['<A-S-Tab>'] = function(fallback)
       				if require('cmp').visible() then
         				require('cmp').select_prev_item()
       				else

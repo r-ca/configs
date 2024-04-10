@@ -33,5 +33,9 @@ return {
 			on_attach = on_attach,
 			capabilities = capabilities
 		}
+
+		-- TS/JS
+		lspconfig.configs.vtsls = require('vtsls').lspconfig
+		lspconfig.vtsls.setup({})
 	end
 }
