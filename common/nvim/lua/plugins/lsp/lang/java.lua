@@ -23,11 +23,11 @@ end
 local mason_registry = require("mason-registry")
 
 -- TODO: Fix this
-local jdtls_path = '/home/rca/.local/share/nvim/mason/packages/jdtls'
--- jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
+-- local jdtls_path = '/home/rca/.local/share/nvim/mason/packages/jdtls'
+local jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
 
-local java_binary = '/usr/lib/jvm/java-17-openjdk/bin/java'
--- java_binary = java_bin()
+-- local java_binary = '/usr/lib/jvm/java-17-openjdk/bin/java'
+java_binary = java_bin()
 
 local on_attach = function(client, bufnr)
 	require('plugins.lsp.ext.handlers').on_attach(client, bufnr)
