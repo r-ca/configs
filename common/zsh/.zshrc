@@ -153,3 +153,11 @@ colorlist() {
   done
 }
 export GPG_TTY=$(tty)
+
+## Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# snap
+export PATH="/var/lib/snapd/snap/bin:$PATH"

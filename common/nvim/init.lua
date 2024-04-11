@@ -51,7 +51,7 @@ opt.number = true -- Show line numbers
 
 opt.tabstop = 4 -- Tab width
 opt.shiftwidth = 4 -- Indent width
-opt.expandtab = false -- Use spaces instead of tabs
+opt.expandtab = true -- Use spaces instead of tabs
 
 opt.laststatus = 3
 
