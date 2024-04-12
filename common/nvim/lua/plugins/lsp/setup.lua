@@ -77,5 +77,11 @@ return {
             on_attach = on_attach,
             capabilities = capabilities
         }
+
+        lspconfig.html.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
     end
 }
