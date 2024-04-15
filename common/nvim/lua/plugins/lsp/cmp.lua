@@ -29,7 +29,7 @@ return {
 			formatting = {
 				format = require('lspkind').cmp_format({
 					with_text = true,
-					maxwidth = 50,
+					maxwidth = 120,
 				})
 			},
 
