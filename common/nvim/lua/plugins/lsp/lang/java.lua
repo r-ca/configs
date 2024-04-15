@@ -1,11 +1,9 @@
-
-
 return {
 	'mfussenegger/nvim-jdtls',
 	dependencies = {
 		'neovim/nvim-lspconfig'
 	},
-	-- ft = { "java" },
+	ft = { "java" },
 	config = function()
 local share_dir = os.getenv("HOME") .. "/.local/share"
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
