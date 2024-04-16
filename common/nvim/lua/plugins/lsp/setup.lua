@@ -99,5 +99,12 @@ return {
             on_attach = on_attach,
             capabilities = capabilities
         }
+
+        -- PHP
+        lspconfig.phpactor.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
     end
 }
