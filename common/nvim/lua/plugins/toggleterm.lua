@@ -10,8 +10,8 @@ return {
 					border = 'curved',
 				}
             })
-			vim.keymap.set('n', '<A-t>', ':ToggleTerm<CR>')
-			vim.keymap.set('t', '<A-t>', '<C-\\><C-n>:ToggleTerm<CR>')
+			vim.keymap.set('n', '<Tab>t', ':ToggleTerm<CR>')
+			vim.keymap.set('t', '<Tab>t', '<C-\\><C-n>:ToggleTerm<CR>')
 					
         end
     }
