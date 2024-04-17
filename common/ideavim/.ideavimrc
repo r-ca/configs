@@ -1,0 +1,2 @@
+" i*2 → INSERT終了
+imap ii <ESC>
