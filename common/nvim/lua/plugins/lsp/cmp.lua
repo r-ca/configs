@@ -42,7 +42,7 @@ return {
         				fallback()
 					end
     			end, { 'i' }),
-    			['<A-S-Tab>'] = function(fallback)
+    			['<C-Tab>'] = function(fallback)
       				if require('cmp').visible() then
         				require('cmp').select_prev_item()
       				else
