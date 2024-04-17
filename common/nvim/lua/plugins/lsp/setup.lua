@@ -113,5 +113,12 @@ return {
             on_attach = on_attach,
             capabilities = capabilities
         }
+
+        -- Vim script
+        lspconfig.vimls.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
     end
 }
