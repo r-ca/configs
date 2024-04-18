@@ -114,8 +114,8 @@ vim.keymap.set('i', '<S-BS>', '<C-w>')
 -- vim.keymap.set('n', '<S-h>', '<cmd>BufferNext<CR>')
 
 -- 行端移動
-vim.keymap.set('n', '<C-l>', '$')
-vim.keymap.set('n', '<C-h>', '0')
+vim.keymap.set('n', '<S-l>', '$')
+vim.keymap.set('n', '<S-h>', '0')
 
 -- Pin
 vim.keymap.set('n', '<A-p>', '<cmd>BufferPin<CR>')
