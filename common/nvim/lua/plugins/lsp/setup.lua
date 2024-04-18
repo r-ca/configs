@@ -77,5 +77,48 @@ return {
             on_attach = on_attach,
             capabilities = capabilities
         }
+
+        lspconfig.html.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities,
+            init_options = {
+                embeddedLanguages = { css= true, javascript= true },
+                configurationSection = { 'html', 'css', 'javascript' },
+            }
+        }
+
+        lspconfig.cssls.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
+
+        lspconfig.cssmodules_ls.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
+
+        -- PHP
+        lspconfig.phpactor.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
+
+        -- C/C++
+        lspconfig.clangd.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
+
+        -- Vim script
+        lspconfig.vimls.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
     end
 }

@@ -29,7 +29,7 @@ return {
 			formatting = {
 				format = require('lspkind').cmp_format({
 					with_text = true,
-					maxwidth = 50,
+					maxwidth = 120,
 				})
 			},
 
@@ -42,7 +42,7 @@ return {
         				fallback()
 					end
     			end, { 'i' }),
-    			['<A-S-Tab>'] = function(fallback)
+    			['<C-Tab>'] = function(fallback)
       				if require('cmp').visible() then
         				require('cmp').select_prev_item()
       				else

@@ -1,41 +1,36 @@
-
-
 return {
 	'mfussenegger/nvim-jdtls',
 	dependencies = {
 		'neovim/nvim-lspconfig'
 	},
-	-- ft = { "java" },
+	ft = { "java" },
 	config = function()
-local share_dir = os.getenv("HOME") .. "/.local/share"
-local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local workspace_dir = share_dir .. "/eclipse/" .. project_name
+    local share_dir = os.getenv("HOME") .. "/.local/share"
+    local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+    local workspace_dir = share_dir .. "/eclipse/" .. project_name
 
-local java_bin = function()
-	local java_home = os.getenv('JAVA_HOME')
-	if java_home then
-		return java_home .. '/bin/java'
-	else
-		return 'java'
-	end
-end
+    local java_bin = function()
+	    local java_home = os.getenv('JAVA_HOME')
+	    if java_home then
+		    return java_home .. '/bin/java'
+	    else
+		    return 'java'
+	    end
+    end
 
-local mason_registry = require("mason-registry")
+    local mason_registry = require("mason-registry")
 
--- TODO: Fix this
-local jdtls_path = '/home/rca/.local/share/nvim/mason/packages/jdtls'
--- jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
+    local jdtls_path = mason_registry.get_package('jdtls'):get_install_path()
 
-local java_binary = '/usr/lib/jvm/java-17-openjdk/bin/java'
--- java_binary = java_bin()
+    java_binary = java_bin()
 
-local on_attach = function(client, bufnr)
-	require('plugins.lsp.ext.handlers').on_attach(client, bufnr)
-end
+    local on_attach = function(client, bufnr)
+	    require('plugins.lsp.ext.handlers').on_attach(client, bufnr)
+    end
 
-local capabilities = require('plugins.lsp.ext.handlers').capabilities
-local extended_capabilities = require('jdtls').extendedClientCapabilities
-extended_capabilities.resolveAdditionalTextEditsSupport = true
+    local capabilities = require('plugins.lsp.ext.handlers').capabilities
+    local extended_capabilities = require('jdtls').extendedClientCapabilities
+    extended_capabilities.resolveAdditionalTextEditsSupport = true
 
 -- local capabilities = {
 --     workspace = {

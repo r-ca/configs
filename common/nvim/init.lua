@@ -57,9 +57,9 @@ opt.laststatus = 3
 
 -- Keymaps
 -- Back to normal
-vim.keymap.set('i', 'ii', '<cmd>:stopinsert<CR>')
-vim.keymap.set('t', 'ii', '<C-\\><C-n>')
-vim.keymap.set('v', 'ii', '<Esc>')
+vim.keymap.set('i', '<S-Space>', '<cmd>:stopinsert<CR>')
+vim.keymap.set('t', '<S-Space>', '<C-\\><C-n>')
+vim.keymap.set('v', '<S-Space>', '<Esc>')
 
 -- Window navigation
 -- in normal
