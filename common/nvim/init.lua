@@ -110,8 +110,13 @@ vim.keymap.set('i', '<S-BS>', '<C-w>')
 
 -- barbar
 -- Move to previous/next
-vim.keymap.set('n', '<S-l>', '<cmd>BufferPrevious<CR>')
-vim.keymap.set('n', '<S-h>', '<cmd>BufferNext<CR>')
+-- vim.keymap.set('n', '<S-l>', '<cmd>BufferPrevious<CR>')
+-- vim.keymap.set('n', '<S-h>', '<cmd>BufferNext<CR>')
+
+-- 行端移動
+vim.keymap.set('n', '<C-l>', '$')
+vim.keymap.set('n', '<C-h>', '0')
+
 -- Pin
 vim.keymap.set('n', '<A-p>', '<cmd>BufferPin<CR>')
 -- Close
