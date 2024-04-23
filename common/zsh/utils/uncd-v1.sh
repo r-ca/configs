@@ -8,8 +8,15 @@ unchd_dirs=()
 # push
 function uncd_push() {
     # 配列の要素数が10を超えていたら、最初の要素を削除
-    if [ ${#unchd_dirs[@]} -gt 10 ]; then
+    if [ ${#unchd_dirs[@]} -gt 30 ]; then
         unchd_dirs=(${unchd_dirs[@]:1})
+    fi
+
+    # 前回のディレクトリと同じ場合、追加しない(cdに失敗した場合とかにあり得る)
+    if [ ${#unchd_dirs[@]} -gt 0 ]; then
+        if [ ${unchd_dirs[-1]} = $1 ]; then
+            return
+        fi
     fi
 
     # 引数のディレクトリを配列に追加
