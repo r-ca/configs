@@ -36,11 +36,11 @@ function uncd_pop() {
 }
 
 function uncd_do() {
-    # 引数がない場合、配列の最後の要素を取得
+    # 引数がない場合はpopを実行
     if [ $# -eq 0 ]; then
-        local dir=$(uncd_pop)
+        dir=$(uncd_pop)
     else
-        local dir=$1
+        dir=$1
     fi
     # ディレクトリが存在しない場合、エラーを出力
     if [ ! -d $dir ]; then
