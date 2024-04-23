@@ -28,6 +28,10 @@ function uncd_pop() {
     # 配列の最後の要素を取得して削除
     # 取得した要素を出力
     local dir=${unchd_dirs[-1]}
+
+    # 配列の最後の要素を削除
+    unchd_dirs=(${unchd_dirs[1,-2]})
+
     echo $dir
 }
 
