@@ -161,3 +161,7 @@ eval "$(pyenv init -)"
 
 # snap
 export PATH="/var/lib/snapd/snap/bin:$PATH"
+
+# load utils
+# uncd
+source $HOME/configs/common/zsh/utils/uncd-v1.sh
