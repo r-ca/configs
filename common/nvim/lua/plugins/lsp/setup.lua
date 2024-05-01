@@ -120,5 +120,11 @@ return {
             on_attach = on_attach,
             capabilities = capabilities
         }
+
+        lspconfig.gopls.setup{
+            autostart = true,
+            on_attach = on_attach,
+            capabilities = capabilities
+        }
     end
 }
