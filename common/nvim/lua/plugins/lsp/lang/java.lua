@@ -32,22 +32,13 @@ return {
     local extended_capabilities = require('jdtls').extendedClientCapabilities
     extended_capabilities.resolveAdditionalTextEditsSupport = true
 
--- local capabilities = {
---     workspace = {
---       configuration = true
---     },
---     textDocument = {
---       completion = {
---         completionItem = {
---           snippetSupport = true
---         }
---       }
---     }
---   }
--- 
-local config = {
+        local config = {
 
 	autostart = true,
+
+
+    -- org.eclipse.equinox.launcher_*.jar を読みこむ
+    launcher_path = vim.fn.globpath(jdtls_path, 'org.eclipse.equinox.launcher_*.jar')[1],
 
 	filetypes = { 'java' },
 
