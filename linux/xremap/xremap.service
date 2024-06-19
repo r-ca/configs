@@ -1,0 +1,11 @@
+[Unit]
+Description=xremap
+
+[Service]
+Restart=always
+ExecStart=/home/rca/.cargo/bin/xremap /home/rca/.config/xremap/config.yml
+User=rca
+Group=rca
+
+[Install]
+WantedBy=multi-user.target
