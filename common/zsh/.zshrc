@@ -82,7 +82,7 @@ if [ "$rca_shell_prompt_mode" = "normal" ]; then
     # ���Z�b�g
     local reset='%{\e[0m%}'
     # �}�`(��؂�)
-    local sharp='\uE0B0'
+    local sharp='\uE0B4'
     # �A�[�L�e�N�`��
     local arch=`uname -m`
 
